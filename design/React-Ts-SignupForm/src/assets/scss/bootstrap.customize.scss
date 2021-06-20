@@ -1,0 +1,27 @@
+/* The following block can be included in a custom.scss */
+@import './variables.scss';
+/* make the customizations */
+$theme-colors: (
+    "primary-red": $primary-red,
+    "primary-green": $primary-green,
+    "accent-blue": $accent-blue,
+    "neutral-dark-blue": $neutral-dark-blue,
+    "neutral-grayish-blue": $neutral-grayish-blue,
+);
+
+$grid-breakpoints: (
+    "phone": $phone-grid,
+    "tablet": $tablet-grid,
+    "desktop": $desktop-grid,
+);
+
+$font-size-base: $font-size-base-theme;
+$font-family-sans-serif: $font-family-sans-serif-theme;
+
+$font-weight-normal:          $font-weight-400;
+$font-weight-bold:            $font-weight-500;
+$font-weight-bolder:          $font-weight-600;
+$font-weight-boldest:         $font-weight-700;
+
+/* import bootstrap to set changes */
+@import "bootstrap/scss/bootstrap";

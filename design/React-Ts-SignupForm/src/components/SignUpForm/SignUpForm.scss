@@ -1,0 +1,22 @@
+@import '../../assets/scss/variables.scss';
+.signup-form {
+    .claim-button {
+        padding: 0.6rem;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 0px 0px hsl(246, 25%, 77%);
+        transition: all 0.2s;
+        &:hover, &.invalid {
+            background-color: $primary-green-hover !important;
+        }
+        &:active {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            box-shadow: 0 3px 0px 0px hsl(246, 25%, 77%);
+        }
+    }
+    .terms-of-use {
+        font-size: 0.8rem;
+    }
+}

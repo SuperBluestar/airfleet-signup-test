@@ -1,0 +1,29 @@
+@import '../assets/scss/variables.scss';
+.main-layout {
+    padding: 2rem;
+    background-color: $primary-red;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    .mask-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        background-image: url('../assets/img/bg-intro-desktop-fixed.png');
+        @include phone {
+            background-image: url('../assets/img/bg-intro-mobile.png');
+        }
+    }
+    @include phone {
+        margin: 0;
+        width: 100%;
+        padding: 0.5rem;
+        display: block !important;
+    }
+    @include tablet {
+        padding: 6rem 1rem;
+    }
+}

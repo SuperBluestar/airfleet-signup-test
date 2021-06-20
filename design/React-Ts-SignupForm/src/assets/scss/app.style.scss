@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// Margin, Padding CSS STYLE
+$gap-dir-var: (
+    "t": "-top",
+    "r": "-right",
+    "b": "-bottom",
+    "l": "-left",
+    "trbl": "",
+) !default;
+
+$gap-size-var: (
+    "0":      0,
+    "1":      1,
+    "2":      2,
+    "3":      3,
+    "4":      4,
+    "5":      5,
+    "6":      6,
+    "7":      7,
+    "8":      8,
+    "9":      9,
+    "10":     10,
+) !default;
+
+@each $gap-size, $gap-size-value in $gap-size-var {
+    @each $gap-dir, $gap-dir-value in $gap-dir-var {
+        .m#{$gap-dir}-#{$gap-size} {
+            margin#{$gap-dir-value}: #{$gap-size-value / 2}rem;
+        }
+        .p#{$gap-dir}-#{$gap-size} {
+            padding#{$gap-dir-value}: #{$gap-size-value / 2}rem;
+        }
+    }
+}
+
+// ----------------- self-define class ------------------------- //
+.cur-pointer {
+    cursor: pointer;
+}
+.cur-default {
+    cursor: default;
+}
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #222222, $alpha: 0.2);
+}

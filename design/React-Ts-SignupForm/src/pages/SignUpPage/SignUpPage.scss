@@ -1,0 +1,42 @@
+@import '../../assets/scss/variables.scss';
+.signup-page {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    .description {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        h1 {
+            font-weight: $font-weight-700;
+            font-size: 3rem;
+            @include phone {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+        p {
+            @include phone {
+                text-align: center;
+            }
+        }
+    }
+    .panel {
+        .title {
+            margin-bottom: 1rem;
+            padding: 1rem 3rem;
+        }
+    }
+    @include phone {
+        margin: 5rem 0;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    @include tablet {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    @include desktop {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}

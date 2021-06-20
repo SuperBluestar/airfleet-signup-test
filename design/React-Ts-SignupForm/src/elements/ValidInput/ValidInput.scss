@@ -1,0 +1,36 @@
+@import '../../assets/scss/variables.scss';
+
+.valid-input {
+    display: flex;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid $neutral-grayish-blue;
+    border-radius: 5px;
+    width: 100%;
+    overflow: auto;
+    &.active {
+        border: 1px solid $neutral-dark-blue;
+    }
+    &.error-input {
+        border: 2px solid $primary-red;
+    }
+    &::placeholder {
+        font-weight: $font-weight-600;
+    }
+    .valid-input-inputbox {
+        flex: 0 0 calc(100% - 2rem);
+        border: none;
+        &:focus {
+            outline: none;
+            font-weight: 500;
+        }
+    }
+    .err-status {
+        flex: 0 0 auto;
+    }
+}
+.error-message {
+    text-align: right;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: $primary-red;
+}
